@@ -66,25 +66,15 @@ nav ul li a {
     font-size: 15px;
     
 }
-/*
-.logo {
-    /* background-color: #C00F0C !important; */
-/*}*/
+
 .icon-hamburger {
-    display: none;
+  display: none;
+  cursor: pointer;
 }
+
 .logo img {
     margin-top: 0%;  
 }
-
-/* .premier-lien {
-    color: var(--var-blue-color)!important;
-    /* font-family: Aguarita, "sans-serif"; 
-    font-weight: 700;
-    font-size: 18px;
-    margin-left: 0.2rem;
-    text-decoration: none;
-} */
 
 nav ul li a:hover {
     color: var(--var-secondary-blue);
@@ -116,37 +106,6 @@ header button a:hover {
     background-color: var(--var-text-color);
     color: var(--var-text-color-dark);
     border: 1px solid var(--var-secondary-color);
-}
-
-.menu .sousmenu {
-    list-style-type: none;
-    display: none;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-}
-
-.menu .sousmenu li {
-    float: none;
-    margin: 0;
-    padding: 0;
-    border-top: 1px solid transparent;
-    border-right: 1px solid transparent;
-}
-
-.menu .sousmenu li a:link, .menu li a:visited {
-    display: block;
-    color: #FFF;
-    text-decoration: none;
-    background-color: #808080;
-}
-
-.menu .sousmenu li a:hover {
-    background-color: #199BD2;
-}
-
-.menu li:hover .sousmenu {
-    display: block;
 }
 
 main {
@@ -302,10 +261,6 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);   
 }
 
-/* .fonction-list > :nth-child(2) {
-    width: 300px;
-} */
-
 .card-fonction .icon {
     width: 100px;
     height: 100px;
@@ -452,18 +407,25 @@ main {
 }
 
 #rejoindre {
-    width: 49%;
-    margin: 0 25%;
+    max-width: 700px;
+    margin: 4rem auto 6rem auto;
+    padding: 0 1rem;
+    text-align: center;
 }
 
 #rejoindre h2 {
-    text-align: center;
-    padding-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--var-secondary-blue);
+    margin-bottom: 1rem;
 }
 
 #rejoindre p {
-    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--var-text-color-dark);
 }
+
 
 .systemes-background img {
     margin: 7rem 0;
@@ -548,13 +510,6 @@ main {
     text-decoration: none;
     color: #0D6EFD;
     /* background-color: #C00F0C; */
-}
-
-#demonstration {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    margin-top: 4rem;
 }
 
 /*Page solutions*/
@@ -1172,121 +1127,206 @@ footer {
  }
 
 
- /*Gestion de la responsivité/
- /*Début taille téléphone */
+ /*Gestion de la responsivité */
 
- 
+ @media screen and (max-width: 768px) {
+   header button {
+    display: none;
+  }
 
-  /*Fin taille téléphone */
+  .menu.active ~ button {
+    display: block;
+    margin: 1rem auto 0 auto;
+  }
 
-  /*CSS responsive*/
-  @media screen and (max-width: 680px) {
-    body {
-        margin: 0;
-        padding: 0;
-    }
-
-    .effect1 {
-        width: 30%;
-        height: 60%;
-        position: absolute;
-        background: red!important;
-        border-radius: 100%;
-        left: 3rem;
-        opacity: 35%;
-    }
-    
-    .effect2 {
-        width: 20%;
-        height: 30%;
-        position: absolute;
-        background : red!important;
-        border-radius: 50%;
-        left: 16%;
-        opacity: 35%;
-    }
-    
-    .effect3 {
-        width: 100%;
-        height: 16%;
-        position: absolute;
-        background : red!important;
-        left: 20rem;
-        bottom: 12rem;
-        z-index: 100;
-        opacity: 35%;
-        display: none;
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    left: 5% !important;
+    top: 1rem;
+    border-radius: 1rem;
+    height: auto;
+    padding: 1rem;
+  }
+  
+  .logo {
+    align-self: flex-start;
     }
 
-    header {
-        width: 100%!important;
-        background: white!important;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        justify-items: center;  
-        margin: 0;
-        padding: 0;
-    }
-    header nav {
-        display: none;
-    }
-    header button {
-        display: none;
-    }
 
-    .icon-hamburger {
-        display: flex;
-        margin-top: 13px;
-    }
+  .icon-hamburger {
+    display: block;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    width: 2rem;
+    cursor: pointer;
+  }
 
-    /*nous sommes sur la première section*/
-    #intro {
-        position: relative;
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        justify-items: center;
-        height: 650px;
-        
-    }
-    #intro .droite {
-        height: 400px;
-        width: 400px;
-    }
-    #intro .gauche {
-        padding-top: 15px;
-    }
+  .menu {
+    display: none;
+    width: 100%;
+    margin-top: 1rem;
+  }
 
-    /*Nous sommes a la 2ème section qui est fonction*/
-    #fonction {
-        display: flex;
-        background: blue!important;
-        flex-direction: column;
-    }
+  .menu.active {
+    display: block;
+  }
 
-    /*Nous sommes à la 4ème section : Raison*/
-    #raison {
-        margin: 0;
-        padding: 0;
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  header button {
+    margin: 1rem auto 0 auto;
+    font-size: 14px !important;
+  }
+
+  /*nous sommes sur la première section*/
+   #intro {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    height: auto;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  #intro .droite {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+  }
+
+  #intro .droite img {
+    width: 100%;
+    height: auto;
+    z-index: 2;
+  }
+
+  #intro .gauche {
+    padding-top: 15px;
+    width: 100%;
+  }
+
+  #intro .gauche h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  #intro .gauche p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .effect1,
+  .effect2,
+  .effect3 {
+    display: none;
+  }
+
+  #fonction {
+    margin-top: 5rem;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  #fonction > div > h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  #fonction > div > p {
+    font-size: 1rem;
+    margin: 0 auto;
+    max-width: 90%;
+    line-height: 1.6;
+  }
+
+  .fonction-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .fonction-list .card-fonction {
+    width: 90%;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .card-fonction .icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .card-fonction .icon i,
+  .card-fonction .icon .alertes {
+    font-size: 50px;
+  }
+
+  .card-fonction h3 {
+    font-size: 1.2rem;
+  }
+
+  .card-fonction p {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+   #engagement {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  #engagement h2 {
+    font-size: 1.8rem;
+  }
+
+  #engagement p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+   #raison {
+        padding: 0 1rem;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
     }
 
     #raison .raison-list {
         display: flex;
         flex-direction: column;
+        gap: 2rem;
     }
 
-    .card-raison:nth-child(4) {
-        grid-column: 1 / 2;                     /* Place la carte 4 dans la colonne du milieu */
-        left: 0;
+    .raison-list .card-raison {
+        width: 100%;
+        height: auto;
     }
-      
-      .card-raison:nth-child(5) {
-        grid-column: 3 / 4;
-        right: 0;                     /* Place la carte 5 à droite de la carte 4 */
-      }
 
-      /*Nous sommes à la section système*/
+    /* Supprime le placement manuel des cartes 4 et 5 */
+    .card-raison:nth-child(4),
+    .card-raison:nth-child(5) {
+        grid-column: auto;
+        left: auto;
+        right: auto;
+    }
+
+    /*Nous sommes à la section système*/
       .systemes-background img {
             /* margin: 7rem 0; */
             /* width: 100%; */
@@ -1315,7 +1355,7 @@ footer {
         text-align: center;
         margin-bottom: 4rem; */
         margin-bottom: 0;
-        background-color: red;
+        /* background-color: red; */
     }
 
     #systemes .systemes-list {
@@ -1323,117 +1363,27 @@ footer {
         flex-direction: column;
         gap: 5rem;
         margin-top: -50rem;
-        background-color: blue;
+        /* background-color: blue; */
     }
 
-    /*Nous sommes à la section demonstration*/
-    #demonstration {
-        display: none;
-    }
-    
     /*Nous sommes au footer*/
     footer .haut{
         display: flex;
         flex-direction: column;
     }
+
 }
 
-@media screen and (min-width : 680px) and (max-width : 1000px) {
-    
-    body {
-        display: flex;
-        position: relative;
-        flex-direction: column;
-        align-items: center;
-    }
-    body header {
-        background: white!important;
-        width: 90%;
-        font-size: 11px;
-        padding: 1rem 0;
-        left: 0!important;
-
-    }
-
-    nav ul li a {
-        text-decoration: none!important;
-        color: var(--var-text-color-dark)!important;
-        font-weight: 500;
-        transition: 0.5s;
-        font-size: 10px!important; 
-    }
-
-    header button {
-        width: 20%;
-        font-size: 7px;
-        font-weight: normal;
-    }
-    .logo img{
-        width:clamp(95px, 90%, 150px)!important;
-    }
-
-    .navbar {
-        margin: 0;
-        padding: 0;
-        background-color: rgba(255, 255, 255, 0);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-        /* left: 15%; Ajustement de la position */
-        /* width: 70%; */
-
-    }
-
-    
-
-    .navbar .menu-hamburger {
-        display: block;
-    }
-
-    .nav-links {
-        top: 0;
-        left: 0;
-        position: relative;
-        background-color: rgba(255, 255, 255, 0.319);
-        backdrop-filter: blur(7px);
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;  
-        align-items: center;
-       
-        transition: all 0.5s ease;
-    }
-
-    .nav-links.mobile-menu {
-        margin-left: 0;
-    }
-
-    .nav-links ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar .nav-links ul li{
-        margin: 25px 0;
-        font-size: 1.2em;
-    }
+ @media screen and (max-width: 768px) {
+  /* Styles pour tablettes */
+}
+@media screen and (max-width: 480px) {
+  /* Styles pour téléphones */
 }
 
-@media screen and (min-width : 1001px) and (max-width : 1400px) {
+  /*CSS responsive*/
 
-    body {
-        display: flex;
-        position: relative;
-        flex-direction: column;
-        align-items: center;
-    }
-    body header {
-        background: white!important;
-        width: 80%;
-        font-size: 11px;
-        padding: 1rem 0;
-        left: 0!important;
-
-    }
-
+  img, video {
+  max-width: 100%;
+  height: auto;
 }

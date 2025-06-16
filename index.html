@@ -26,11 +26,10 @@
                     </ul>
                 </div>
             </nav>
+            <button><a href="#systemes">Découvrir nos systèmes</a></button>
             <div class="icon-hamburger">
                 <img src="assets/menu-btn.png">
             </div>
-            
-            <button><a href="#systemes">Découvrir nos systèmes</a></button>
         </header>
         
         <main>
@@ -55,9 +54,6 @@
                </div>
                <div class="droite">
                     <img src="assets/IlltustreImg.png" alt="Illustration">
-                    <!-- <div class="effect-droite"> -->
-                        <!-- <img src="assets/Ellipse 5.png" alt=""> -->
-                    <!-- </div> -->
                 </div>
             </Section>
 
@@ -83,8 +79,6 @@
                     </div>
                     <div class="card-fonction">
                         <div class="icon">
-                            <!-- <i class="iconify icon" data-icon="gridicons:chat"></i>  -->
-                            <!-- <i class="fa-solid fa-bullhorn"></i> -->
                             <img src="assets/Vector.png" alt="">
                         </div>
                         <h3>Communiquer avec les entreprises</h3>
@@ -94,8 +88,6 @@
                     </div>
                     <div class="card-fonction">
                         <div class="icon">
-                            <!-- <i class="iconify icon" data-icon="material-symbols:work-update"></i>  -->
-                            <!-- <i class="fa-solid fa-reply-all"></i> -->
                             <img src="assets/material-symbols_work-update.png" alt="">
                         </div>
                         <h3>Recevoir des mises à jour</h3>
@@ -105,8 +97,6 @@
                     </div>
                     <div class="card-fonction">
                         <div class="icon">
-                           <!-- <i class="iconify icon" data-icon="iconoir:journal-page"></i>  -->
-                           <!-- <i class="fas fa-star" ></i> -->
                            <img src="assets/Group.png" alt="">
                         </div>
                         <h3>Accéder aux publications des entreprises</h3>
@@ -138,8 +128,6 @@
                     </div>
                     <div class="card-raison">
                         <div class="icon">
-                            <!-- <i class="iconify icon" data-icon="ph:chalkboard-simple-fill"></i>  -->
-                            <!-- <i class="fa-solid fa-bell"></i> -->
                             <img src="assets/Simplepng.png" alt="">
                         </div>
                         <h3>Simplicité</h3>
@@ -149,8 +137,6 @@
                     </div>
                     <div class="card-raison">
                         <div class="icon">
-                            <!-- <i class="iconify icon" data-icon="fluent-mdl2:chronos-logo"></i> -->
-                            <!-- <i class="fa-solid fa-reply-all"></i> -->
                             <img src="assets/fluent-mdl2_chronos-logo.png" alt="">
                         </div>
                         <h3>Suivi en temps réel</h3>
@@ -160,8 +146,6 @@
                     </div>
                     <div class="card-raison">
                         <div class="icon">
-                            <!-- <i class="iconify icon" data-icon="fluent:news-16-filled"></i> -->
-                            <!-- <i class="fa-solid fa-circle-info"></i> -->
                             <img src="assets/publish.png" alt="">
                         </div>
                         <h3>Publications d’entreprises</h3>
@@ -171,7 +155,6 @@
                     </div>
                     <div class="card-raison">
                         <div class="icon">
-                            <!-- <i class="fa-solid fa-lock"></i> -->
                             <img src="assets/ic_baseline-lock.png" alt="">
                         </div>
                         <h3>Sécurité et confidentialité</h3>
@@ -232,7 +215,7 @@
             </section>
 
             <!-- Bouton pour remonter en haut -->
-            <!-- <button id="scrollTopBtn" onclick="scrollToTop()">⬆</button> -->
+            <button id="scrollTopBtn" onclick="scrollToTop()">⬆</button>
 
         </main>
 
@@ -292,22 +275,13 @@
         </footer>
 
         <script>
-            function initTranslate() {
-                new google.translate.TranslateElement({
-                    pageLanguage: 'fr', // Langue par défaut
-                    includedLanguages: 'fr,en', // Seulement Français et Anglais
-                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-                }, 'google_translate_element');
-            }
+            const menu = document.querySelector('.menu');
+            const hamburger = document.querySelector('.icon-hamburger');
+
+            hamburger.addEventListener('click', () => {
+                menu.classList.toggle('active');
+            });
         </script>
 
-        <script>
-            const menuHamburger = document.querySelector(".menu-hamburger")
-            const navLinks = document.querySelector(".nav-links")
-
-            menuHamburger.addEventListener('click',()=>{
-            navLinks.classList.toggle('mobile-menu')
-            }) 
-        </script>
     </body>
 </html>
