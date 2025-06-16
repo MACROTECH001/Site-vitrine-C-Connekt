@@ -520,25 +520,32 @@ main {
 
 #utilisation {
     width: 100%;
-    height: 70vh;
+    padding: 4rem 2rem;
     display: grid;
+    place-items: center;
+    background-color: var(--var-bg-light); /* optionnel */
 }
 
 #utilisation h2 {
     color: var(--var-greyHard-color);
     font-weight: 600;
     text-align: center;
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
 }
 
 #utilisation .imageCas {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 #utilisation img {
-    width: 40%;
-    height: 65vh;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
     border-radius: 28px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     margin: 2rem 0;
@@ -631,9 +638,15 @@ main {
 #technicien {
     margin: 3rem 0;
     padding: 0 15rem;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+#technicien h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
 }
 
 #technicien h2 strong {
@@ -641,12 +654,54 @@ main {
     font-weight: 600;
 }
 
+/* Structure des cartes */
+#technicien .fonction-list {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.fonction-list .card-fonction {
+    flex: 1 1 280px;
+    max-width: 300px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-fonction .icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-fonction .icon img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card-fonction h3 {
+    font-size: 1.1rem;
+    color: var(--var-secondary-blue);
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+}
+
+.card-fonction p {
+    font-size: 0.95rem;
+    color: #444;
+}
+
 #crmfunction {
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-    padding: 0 20rem;
-    /* justify-content: center;
-    align-items: center; */
+    margin: 10rem 0;
+    padding: 0 10rem;
     text-align: center;
 }
 
@@ -655,41 +710,48 @@ main {
     font-weight: 600;
 }
 
+/* Conteneur cartes avec grid uniquement */
 #crmfunction .crmfunction-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
-    /* justify-content: center;
-    align-items: center;
-    text-align: center; */
-}
-
-.crmfunction-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
     margin-top: 3rem;
 }
-  
-.card-crmfunction:nth-child(5) {
-    position: relative;
-    grid-column: 1 / 2;                     
-    left: 60%;           
-  }
+
+/* Carte individuelle */
+.card-crmfunction {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card-crmfunction:hover {
+    transform: scale(1.03);
+}
 
 .card-crmfunction img {
     width: 100%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
+    border-radius: 15px 15px 0 0;
 }
 
 .card-crmfunction h3 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
     text-align: center;
 }
+
+.card-crmfunction:nth-child(4) {
+    position: relative;
+    grid-column: 1 / 2;                     
+    left: 50%;           
+  }
+
+  .card-crmfunction:nth-child(5) {
+    position: relative;
+    grid-column: 2 / 2;                     
+    left: 50%;           
+  }
 
 /*A propos*/
 .presentation {
@@ -1344,6 +1406,50 @@ footer .bas p {
 
   .effect-solution {
     padding-top: 9rem;
+  }
+
+  /*Page solutions*/
+  #utilisation h2 {
+        font-size: 1.4rem;
+        padding: 0 1rem;
+    }
+
+    #utilisation img {
+        width: 90%;
+    }
+
+    #technicien {
+        padding: 0 1.5rem;
+    }
+
+    #technicien h2 {
+        font-size: 1.4rem;
+        padding: 0 1rem;
+    }
+
+    .fonction-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-fonction {
+        width: 100%;
+    }
+
+    #crmfunction {
+        padding: 0 2rem;
+        margin: 5rem 0;
+    }
+    
+    #crmfunction h2 {
+        font-size: 1.5rem;
+    }
+
+    .card-crmfunction:nth-child(4),
+    .card-crmfunction:nth-child(5)  {
+    position: relative;
+    grid-column: 1 / 2;                     
+    left: 0%;           
   }
 
     /*Nous sommes au footer*/
