@@ -227,13 +227,11 @@ main {
 
 #fonction {
     margin-top: 10rem;
-    /* margin-bottom: 1rem; */
     padding: 10rem;
 }
 
 
 #fonction > h2{
-    /* color: #8df80a; */
     margin-bottom: -11rem;
 }
 
@@ -252,8 +250,8 @@ main {
 
 .fonction-list .card-fonction {
     flex: 1;
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 350px;
     background-color: #fff;
     padding: 1rem;
     border-radius: 15px;
@@ -382,11 +380,8 @@ main {
 }
 
 .card-raison .icon i {
-    /* font-size: 3rem;
-    color: var(--var-secondary-blue); */
 
     font-size: 72px;
-    /* display: inline-block; */
     background: conic-gradient(from 180deg, var(--var-secondary-blue), var(--var-blue-light));
     -webkit-background-clip: text;  /* WebKit browsers */
     -moz-background-clip: content-box;     /* Firefox */
@@ -438,17 +433,14 @@ main {
     padding: 5rem 20rem;
     width: 100%;
     height: 100vh;
-    /* background-image: url(assets/blue_flame2.png); */
-    /* background-position:0; */
 }
 
 #systemes > h2 {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 2rem;
+    font-weight: 400;
     color: var(--var-bg-light);
-    margin-bottom: 2rem;
+    margin-bottom: 3.5rem;
     text-align: center;
-    margin-bottom: 4rem;
 }
 
 #systemes .systemes-list {
@@ -941,7 +933,7 @@ main {
     background: white;
     border-radius: 5px;
     margin-bottom: 10px;
-    box-shadow: 0pxl 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
@@ -983,8 +975,8 @@ main {
 
 
 footer {
-    background-color: #0D6EFD;
-    color: #ffffff;
+    background-color: var(--var-dark-blue);;
+    color: var(--var-bg-light);
     padding: 4rem 2rem;
     margin-top: 5rem;
     font-size: 0.95rem;
@@ -1005,7 +997,7 @@ footer .haut > div {
 footer .haut h2 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: #ffffff;
+    color: var(--var-bg-light);
 }
 
 footer .haut ul {
@@ -1019,14 +1011,42 @@ footer .haut ul li {
     line-height: 1.5;
 }
 
+.stayConnect ul li a {
+    color: var(--var-blue-light);
+ }
+
 footer a {
-    color: #ffc107;
+    color: var(--var-bg-light);
     text-decoration: none;
 }
 
 footer a:hover {
     text-decoration: underline;
 }
+
+ .Contacts {
+    width: 100%;
+    height: auto;
+    padding: 1%;
+    background: linear-gradient(to right, var(--var-secondary-blue) , var(--var-blue-light));
+    border-radius: 20px;
+    /* display: flex; */
+    justify-content: center;
+}
+
+.Contacts ul {
+    list-style: none; 
+ }
+
+.Contacts ul li {
+    font-size: 1rem;
+    list-style: none; 
+    margin-top: 1.2rem;
+ }
+
+.Contacts ul li a {
+    color: var(--var-bg-light);
+ }
 
 /* Bas du footer */
 footer .bas {
@@ -1072,6 +1092,11 @@ footer .bas p {
  /*Gestion de la responsivité */
 
  @media screen and (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
    header button {
     display: none;
   }
@@ -1138,6 +1163,7 @@ footer .bas p {
     height: auto;
     text-align: center;
     gap: 1rem;
+    margin-top: -35rem;
   }
 
   #intro .droite {
@@ -1165,11 +1191,13 @@ footer .bas p {
   #intro .gauche h1 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    margin-left: 0;
   }
 
   #intro .gauche p {
     font-size: 1rem;
     padding: 0 1rem;
+    margin-left: 0;
   }
 
   .effect1,
@@ -1270,34 +1298,23 @@ footer .bas p {
 
     /*Nous sommes à la section système*/
       .systemes-background img {
-            /* margin: 7rem 0; */
-            /* width: 100%; */
             height: 1600px;
         }
     
     #systemes {
         margin-top: -55rem;
-        /* padding: 5rem 20rem; */
-        /* width: 100%; */
-        /* height: 150vh; */
-        /* background-image: url(assets/blue_flame2.png); */
-        /* background-position:0; */
-        /* margin: 0; */
         padding: 0;
         display: flex;
         justify-items: center;
         justify-content: center;
     }
 
-    #systemes .systemes-list h2 {
-        /* font-size: 20px;
-        font-weight: 600;
-        color: var(--var-bg-light);
-        margin-bottom: 2rem;
+     #systemes > h2 {
+        display: none;
+        font-size: 1.5rem;
         text-align: center;
-        margin-bottom: 4rem; */
-        margin-bottom: 0;
-        /* background-color: red; */
+        margin-bottom: 2rem;
+        color: var(--var-bg-light); /* si le fond est foncé */
     }
 
     #systemes .systemes-list {
@@ -1307,6 +1324,27 @@ footer .bas p {
         margin-top: -50rem;
         /* background-color: blue; */
     }
+
+     .systemes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+    .card-system {
+    width: 90%; /* mieux que fixed width */
+    height: auto;
+  }
+
+  .card-system img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .effect-solution {
+    padding-top: 9rem;
+  }
 
     /*Nous sommes au footer*/
     footer .haut{
