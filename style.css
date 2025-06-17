@@ -756,8 +756,8 @@ main {
 .presentation {
     margin: 10rem 3rem;
     width: 65%;
-    /* background-color: #00FFFF; */
     margin-bottom: 5rem;
+
 }
 
 .presentation h2 {
@@ -871,7 +871,6 @@ main {
     font-weight: 500;
 }
 
-/* ✅ Garde ton style de bouton élégant */
 #engagement-apropos button {
     background-image: linear-gradient(to right, var(--var-secondary-blue), var(--var-blue-light));
     color: var(--var-bg-light);
@@ -1480,6 +1479,14 @@ footer .bas p {
 
     #engagement-apropos button {
         width: 100%;
+    }
+
+    /*Page apropos*/
+    .presentation {
+        margin: 5rem 5%;
+        width: 90%;
+        margin-bottom: 5rem;
+        text-align: center;
     }
 
     /*Nous sommes au footer*/
