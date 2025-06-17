@@ -1005,6 +1005,7 @@ main {
     font-weight: bold;
     cursor: pointer;
     text-align: left;
+    color: var(--var-secondary-blue);
 }
 
 .faq-content {
@@ -1012,6 +1013,8 @@ main {
     font-size: 16px;
     display: none;
     border-top: 1px solid #ddd;
+    color: var(--var-greyHard-color);
+    text-align: center;
 }
 
 /* Icône flèche */
@@ -1487,6 +1490,20 @@ footer .bas p {
         width: 90%;
         margin-bottom: 5rem;
         text-align: center;
+    }
+
+    /*Page Contacts*/
+    .contact-background img {
+        width: 100%;
+        height: 400px;
+    }
+
+    #contact-fonction {
+        margin-top: -10rem;
+    }
+
+    .contact-fonction-list {
+        margin-top: 1.5rem;
     }
 
     /*Nous sommes au footer*/
