@@ -120,7 +120,7 @@
                 <p>
                     Vous souhaitez rejoindre notre réseau de partenaires et collaborer avec nous pour transformer les services et améliorer les expériences client ?
                 </p>
-                <button>Découvrir nos partenaire</button>
+               <button onclick="window.location.href='partenaire.html'">Découvrir nos partenaires</button>
             </section>
 
             <!-- Bouton pour remonter en haut -->
@@ -181,5 +181,14 @@
                 <p>© 2025 C-Connekt. Tous droits réservés. Transformons ensemble la communication entre clients et entreprises !</p>
             </section>
         </footer>
+
+        <script>
+            const menu = document.querySelector('.menu');
+            const hamburger = document.querySelector('.icon-hamburger');
+
+            hamburger.addEventListener('click', () => {
+                menu.classList.toggle('active');
+            });
+        </script>
     </body>
 </html>

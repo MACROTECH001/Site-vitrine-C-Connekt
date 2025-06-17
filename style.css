@@ -558,7 +558,6 @@ main {
     min-height: 60vh;
     margin: 0;
     padding: 0;
-    /*background-color: #001A5B;*/
     margin-top: 5rem;
 }
 
@@ -771,83 +770,61 @@ main {
 }
 
 #apropos-fonction {
-    /* margin-top: 10rem; */
-    /* margin-bottom: 1rem; */
     padding: 3rem 10rem;
 }
 
-
-#apropos-fonction > h2{
-    /* color: #8df80a; */
-    /* margin-bottom: -11rem; */
+#apropos-fonction > h2 {
     text-align: center;
+    font-size: 2rem;
+    /* color: var(--var-greyHard-color); */
 }
-
-/* .apropos-fonction-list > p {
-    margin-right: 8rem;
-} */
 
 .apropos-fonction-list {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items: stretch;
     flex-wrap: wrap;
-    gap: 6rem; 
+    gap: 1.6rem;
     margin-top: 3rem;
 }
 
 .apropos-fonction-list .card-apropos {
-    flex: 1;
-    height: 330px;
-    width: 300px;
+    flex: 1 1 280px;
+    max-width: 300px;
     background-color: #fff;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     border-radius: 15px;
-    position: relative;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);   
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
-/* .fonction-list > :nth-child(2) {
-    width: 300px;
-} */
+.card-apropos:hover {
+    transform: translateY(-5px);
+}
 
 .card-apropos .icon {
-    width: 100px;
-    height: 100px;
-    /* background-color: var(--var-grey-color); */
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border-radius: 50%; */
-    margin: auto; 
+}
+
+.card-apropos .icon img {
+    max-width: 100%;
+    height: auto;
 }
 
 .card-apropos h3 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    text-align: center;
     color: var(--var-secondary-blue);
+    font-weight: bold;
     text-transform: uppercase;
+    margin-bottom: 1rem;
 }
 
 .card-apropos p {
-    text-align: center;
-    color: var(--var-greyHard-color);
-    font-weight: 500;
-}
-
-#engagement-apropos {
-    width: 30%;
-    margin: 5rem 35%;
-}
-
-#engagement-apropos h2 {
-    text-align: center;
-    padding-bottom: 1rem;
-}
-
-#engagement-apropos p {
-    text-align: center;
     color: var(--var-greyHard-color);
     font-weight: 500;
 }
@@ -855,20 +832,22 @@ main {
 /*Partebaires*/
 .text-partenaire {
     width: 50%;
-    margin: 10rem 25%;
-    /* background-color: #00FFFF; */
-    margin-bottom: 5rem;
+    margin: 10rem auto 5rem auto;
     text-align: center;
 }
 
 .text-partenaire h2 {
     margin-bottom: 1rem;
+    font-size: 2rem;
+    /* color: var(--var-greyHard-color); */
+    font-weight: 600;
 }
 
 .text-partenaire p {
     color: var(--var-greyHard-color);
     font-weight: 500;
-    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 1.6;
 }
 
 #apropos-fonction h2 strong {
@@ -877,12 +856,28 @@ main {
     font-weight: 600;
 }
 
+#engagement-apropos {
+    width: 30%;
+    margin: 5rem auto;
+    text-align: center;
+}
+
+#engagement-apropos h2 {
+    padding-bottom: 1rem;
+}
+
+#engagement-apropos p {
+    color: var(--var-greyHard-color);
+    font-weight: 500;
+}
+
+/* ✅ Garde ton style de bouton élégant */
 #engagement-apropos button {
-    background-image: linear-gradient(to right, var(--var-secondary-blue) , var(--var-blue-light));
+    background-image: linear-gradient(to right, var(--var-secondary-blue), var(--var-blue-light));
     color: var(--var-bg-light);
     border: none;
     padding: 0.7rem 0.6rem;
-    margin: 2rem 30%;
+    margin-top: 2rem;
     border-radius: 2rem;
     font-weight: 700;
     cursor: pointer;
@@ -1092,7 +1087,6 @@ footer a:hover {
     padding: 1%;
     background: linear-gradient(to right, var(--var-secondary-blue) , var(--var-blue-light));
     border-radius: 20px;
-    /* display: flex; */
     justify-content: center;
 }
 
@@ -1452,6 +1446,42 @@ footer .bas p {
     left: 0%;           
   }
 
+    /*Page partenaire*/
+    .text-partenaire {
+        width: 90%;
+        margin: 6rem auto 3rem auto;
+    }
+
+    .text-partenaire h2 {
+        font-size: 1.5rem;
+    }
+
+    .text-partenaire p {
+        font-size: 1.1rem;
+    }
+
+     #apropos-fonction {
+        padding: 2rem 1rem;
+    }
+
+    #apropos-fonction > h2 {
+        font-size: 1.5rem;
+    }
+
+    .card-apropos {
+        width: 100%;
+        max-width: none;
+    }
+
+    #engagement-apropos {
+        width: 90%;
+        padding: 0 1rem;
+    }
+
+    #engagement-apropos button {
+        width: 100%;
+    }
+
     /*Nous sommes au footer*/
     footer .haut{
         display: flex;
@@ -1460,11 +1490,32 @@ footer .bas p {
 
 }
 
- @media screen and (max-width: 768px) {
-  /* Styles pour tablettes */
-}
-@media screen and (max-width: 480px) {
-  /* Styles pour téléphones */
+/* ✅ Responsive tablette */
+@media screen and (max-width: 1024px) {
+    .text-partenaire {
+        width: 70%;
+    }
+
+    .text-partenaire p {
+        font-size: 1.5rem;
+    }
+
+    #apropos-fonction {
+        padding: 3rem 5rem;
+    }
+
+    .apropos-fonction-list {
+        justify-content: center;
+    }
+
+    #engagement-apropos {
+        padding: 4rem 5rem;
+    }
+
+    #engagement-apropos {
+        width: 60%;
+        padding: 0 2rem;
+    }
 }
 
   /*CSS responsive*/
