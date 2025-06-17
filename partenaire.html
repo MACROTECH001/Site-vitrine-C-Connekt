@@ -124,7 +124,9 @@
             </section>
 
             <!-- Bouton pour remonter en haut -->
-            <button id="scrollTopBtn" onclick="scrollToTop()">⬆</button>
+            <button id="scrollTopBtn" onclick="scrollToTop()">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
         </main>
 
         <footer>
@@ -189,6 +191,26 @@
             hamburger.addEventListener('click', () => {
                 menu.classList.toggle('active');
             });
+        </script>
+
+        <script>
+            const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+            window.onscroll = function () {
+                // Affiche le bouton quand on descend de 200px
+                if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollTopBtn.style.display = "block";
+                } else {
+                scrollTopBtn.style.display = "none";
+                }
+            };
+
+            function scrollToTop() {
+                window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+                });
+            }
         </script>
     </body>
 </html>
