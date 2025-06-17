@@ -244,14 +244,14 @@ main {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 6rem; 
+    gap: 1.5rem; 
     margin-top: 3rem;
 }
 
 .fonction-list .card-fonction {
     flex: 1;
     height: 350px;
-    width: 350px;
+    width: 300px;
     background-color: #fff;
     padding: 1rem;
     border-radius: 15px;
